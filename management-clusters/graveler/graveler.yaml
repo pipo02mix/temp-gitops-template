@@ -14,5 +14,5 @@ spec:
   path: "./management-clusters/graveler"
   sourceRef:
     kind: GitRepository
-    name: GITOPS_REPO  # TODO: the name of the GitRepository created in the next section
+    name: temp-gitops-template
   timeout: 2m
