@@ -1,0 +1,22 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: graveler-clusters-fertest01
+  namespace: default
+spec:
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-gpg-fertest01
+  interval: 1m
+  path: "./management-clusters/graveler/organizations/fer/workload-clusters/fertest01/mapi"
+  postBuild:
+    substitute:
+      cluster_name: "fertest01"
+      organization: "fer"
+  prune: false
+  serviceAccountName: automation
+  sourceRef:
+    kind: GitRepository
+    name: temp-gitops-template
+  timeout: 2m
