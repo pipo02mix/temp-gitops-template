@@ -1,0 +1,7 @@
+creation_rules:
+  - encrypted_regex: ^(data|stringData)$
+    path_regex: management-clusters/graveler/secrets/.*\.enc\.yaml
+    pgp: E349E6F35353C8093A53C73426A0887AF6D31429
+  - encrypted_regex: ^(data|stringData)$
+    path_regex: management-clusters/graveler/organizations/fer/secrets/.*\.enc\.yaml
+    pgp: 7940C9B7B0F91E6162FC8DE8C26C6A369B5E3AFD
