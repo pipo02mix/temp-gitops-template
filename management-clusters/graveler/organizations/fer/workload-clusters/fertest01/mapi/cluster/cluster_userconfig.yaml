@@ -8,6 +8,8 @@ data:
       nodePools:
         nodepool0:
           instanceType: m6i.xlarge
+      release:
+        version: 36.1.0
 kind: ConfigMap
 metadata:
   name: ${cluster_name}-userconfig
