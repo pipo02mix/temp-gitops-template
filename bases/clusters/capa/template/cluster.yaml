@@ -17,4 +17,3 @@ spec:
     inCluster: true
   name: cluster-aws
   namespace: org-${organization}
-  version: ""
