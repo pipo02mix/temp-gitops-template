@@ -10,3 +10,12 @@ kind: Kustomization
 namespace: org-${organization}
 resources:
   - ../../../../../../../../../bases/app_sets/hello-web-app
+patches:
+  - patch: |-
+      - op: replace
+        path: /spec/ref
+        value:
+          semver: '>=3.0.0 <4.0.0'
+    target:
+      kind: OCIRepository
+      name: \${cluster_name}-hello-world
