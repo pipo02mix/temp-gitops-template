@@ -10,6 +10,7 @@ kind: Kustomization
 namespace: org-${organization}
 resources:
   - ../../../../../../../../../bases/app_sets/hello-web-app
+  - secret.enc.yaml
 patches:
   - patch: |-
       - op: replace
