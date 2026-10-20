@@ -5,5 +5,4 @@ patches:
     target:
       kind: HelmRelease
 namespace: org-fer
-resources:
-  - hello-world
+resources: []

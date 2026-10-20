@@ -1,14 +1,12 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 buildMetadata: [originAnnotations]
-## CONFIGURATION OVERRIDE BLOCK START - include only if overriding default config from the Template
 configMapGenerator:
   - files:
-      - values=override_config.yaml
+      - values=override_config_hello_world.yaml
     name: ${cluster_name}-hello-world-user-values
 generatorOptions:
   disableNameSuffixHash: true
-## CONFIGURATION OVERRIDE BLOCK END
 kind: Kustomization
 namespace: org-${organization}
 resources:
-  - ../../../../../../../../../bases/apps/hello-world
+  - ../../../../../../../../../bases/app_sets/hello-web-app
