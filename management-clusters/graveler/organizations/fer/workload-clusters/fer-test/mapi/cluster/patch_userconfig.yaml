@@ -1,0 +1,11 @@
+apiVersion: application.giantswarm.io/v1alpha1
+kind: App
+metadata:
+  name: ${cluster_name}
+  namespace: org-${organization}
+spec:
+  version: ""
+  userConfig:
+    configMap:
+      name: ${cluster_name}-userconfig
+      namespace: org-${organization}
