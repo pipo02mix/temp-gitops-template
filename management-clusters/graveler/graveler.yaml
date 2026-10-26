@@ -4,14 +4,10 @@ metadata:
   name: graveler-gitops
   namespace: default
 spec:
-  decryption:
-    provider: sops
-    secretRef:
-      name: sops-gpg-master
-  serviceAccountName: automation
-  prune: false
   interval: 1m
-  path: "./management-clusters/graveler"
+  path: ./management-clusters/graveler
+  prune: false
+  serviceAccountName: automation
   sourceRef:
     kind: GitRepository
     name: temp-gitops-template
