@@ -1,0 +1,19 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: graveler-clusters-fer-test-sops
+  namespace: default
+spec:
+  interval: 1m
+  path: ./management-clusters/graveler/organizations/fer/workload-clusters/fer-test-sops/mapi
+  postBuild:
+    substitute:
+      cluster_description: "fer-test-sops managed by GitOps"
+      cluster_name: "fer-test-sops"
+      organization: "fer"
+  prune: false
+  serviceAccountName: automation
+  sourceRef:
+    kind: GitRepository
+    name: temp-gitops-template
+  timeout: 2m
