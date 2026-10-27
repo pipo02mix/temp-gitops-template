@@ -1,2 +1,4 @@
 ingress:
   enabled: false
+autoscaling:
+  minReplicas: 2
