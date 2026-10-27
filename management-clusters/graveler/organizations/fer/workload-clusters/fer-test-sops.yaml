@@ -11,7 +11,7 @@ spec:
       cluster_description: "fer-test-sops managed by GitOps"
       cluster_name: "fer-test-sops"
       organization: "fer"
-  prune: false
+  prune: true
   serviceAccountName: automation
   sourceRef:
     kind: GitRepository
